@@ -67,5 +67,11 @@ public class UserController {
         return userService.getUserFilteredPostTitle(title);
     }
 
+    //Test aop after exception
+    @GetMapping("/exception")
+    public void throwExceptionTest() throws Exception {
+        throw new Exception();
+    }
+
 
 }
