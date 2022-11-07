@@ -21,4 +21,5 @@ public class ExceptionDb {
     private Date dateTime;
     private String username;
     private String operation;
+    private String exceptionType;
 }

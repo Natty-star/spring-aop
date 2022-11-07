@@ -25,6 +25,7 @@ public class ExceptionAspect {
                 .dateTime(new Date())
                 .username("natty")
                 .operation(joinPoint.getSignature().getName())
+                .exceptionType(e.getClass().getName())
                 .build();
         exceptionRepository.save(exceptionDb);
     }
