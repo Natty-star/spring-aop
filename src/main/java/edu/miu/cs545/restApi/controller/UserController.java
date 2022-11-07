@@ -1,5 +1,6 @@
 package edu.miu.cs545.restApi.controller;
 
+import edu.miu.cs545.restApi.aspect.annotation.ExecutionTime;
 import edu.miu.cs545.restApi.domain.Post;
 import edu.miu.cs545.restApi.domain.User;
 import edu.miu.cs545.restApi.domain.dto.PostDto;
@@ -25,6 +26,7 @@ public class UserController {
         return userService.getAll();
     }
 
+    @ExecutionTime // aop annotation execution time calc
     @GetMapping("/{id}")
     public UserDto getUser(@PathVariable("id") Long id){
         return userService.getUser(id);
